@@ -1,0 +1,25 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecionando...</title>
+    <script>
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android/i.test(userAgent)) {
+        window.location.href =
+          "https://play.google.com/store/apps/details?id=com.sesirsgames.CubodoBemEstar&hl=pt_BR";
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href =
+          "https://apps.apple.com/br/app/cubo-do-bem-estar-sesi-rs/id6463235702";
+      } else {
+        // Redirecionamento padrão, caso não seja mobile
+        window.location.href = "https://sesirs.org.br"; // ou qualquer página institucional
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecionando para a loja correta...</p>
+  </body>
+</html>
